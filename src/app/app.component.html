@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" style="color:white;">ATM LOCATOR</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+     
+     <form class="form-inline my-2 my-lg-0">
+        <input type="search" (ngModelChange)="searchCity(key.value)" #key="ngModel" ngModel
+         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Type City..." required>
+     </form>
+  </div>
+</nav>
+<div class="container" id="main-container">
+<div class="row">
+  <div *ngFor="let address of address" class="col-md-6 col-xl-3">
+     <div class="card m-b-30">
+        <div class="card-body row">
+
+                   
+           <div class="col-6 card-title align-self-center mb-3">
+              <h5 class="modal-title" id="City"> City {{address.city}}</h5>
+              <h5> House Number {{address.housenumber}}</h5>
+              <h5> Street {{address.street}}</h5>
+              <h5> Postal Code {{address.postalcode}}</h5>
+                           
+           </div>
+        </div>
+        
+        
+     </div>
+  </div>
+</div>
+
+
+
+
+
